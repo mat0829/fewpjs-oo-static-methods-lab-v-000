@@ -9,6 +9,7 @@ class Formatter {
     return string.replace( /[^A-Za-z0-9 '-]/g, '' )
   }
   
+<<<<<<< HEAD
   static titleize( sentence ) {
     let exceptions = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let result = [];
@@ -27,4 +28,13 @@ class Formatter {
     }
     return result.join( " " );
   }
+=======
+  static titleize(string) {
+    value = string
+    words_to_ignore = ["the","of"]
+    new_string = value.split(' ')
+    .each{|i| i.capitalize! if ! words_to_ignore.include? i }
+    .join(' ')
+  } 
+>>>>>>> efb712df7c2931df9c7634a9268a26ab9b5eef29
 }
